@@ -11,17 +11,17 @@ $ gedit husky_empty_world2.launch
 
 ### Edit your launch file to something like this:
 
-<launch>
-  <include file="$(find husky_gazebo)/launch/husky_empty_world.launch">
-    <arg name="world_name" value="worlds/robocup14_spl_field.world"/>
-  </include>
-</launch>
+$ <launch>
+$ <include file="$(find husky_gazebo)/launch/husky_empty_world.launch">
+$    <arg name="world_name" value="worlds/robocup14_spl_field.world"/>
+$  </include>
+$ </launch>
 
 ### Now it is necessary to implement the teleop_keyboard_twist
 
 In the same launch file created you need to add this command line in your script.
 
-<node name="teleop_twist_keyboard" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen">
-  </node>
+$ <node name="teleop_twist_keyboard" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen">
+$  </node>
   
 ### Execute the launch file and done!
